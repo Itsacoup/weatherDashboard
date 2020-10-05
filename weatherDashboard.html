@@ -1,41 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
- 
+
     <!-- Bootsrap CDN -->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
- integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-<!-- Google Fonts CDN  -->
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts CDN  -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Font Awesome CDN  -->
-<script src="https://kit.fontawesome.com/6acb0d9fa3.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN  -->
+    <script src="https://kit.fontawesome.com/6acb0d9fa3.js" crossorigin="anonymous"></script>
 
-<!-- Local Style Sheet -->
-<link rel="stylesheet" href="style.css">
+    <!-- Local Style Sheet -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center mt-2 border rounded bgcolor">
+                <H1>Weather Forecast</H1>
+            </div>
+        </div>
 
 
-
-
-
-
-
-
-
-
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        <div class="row justify-content-between m-3 text-center">
+            <div class="col-lg-3 border  rounded m-2 bgcolor">
+                <H4 class="mt-3">Search a city below:</H4>
+                <input type="text" name="" class="mb-3" id="citySearch">
+                <button class="btn btn-warning btn-sm" id="searchSubmit">go</button>
+                <hr class="mt-5">
+                <button class="btn btn-warning citySubmit" data-button="new york">New York</button>
+                <hr>
+                <button class="btn btn-warning citySubmit" data-button="los `angeles">Los Angeles</button>
+                <hr>
+                <button class="btn btn-warning citySubmit" data-button="chicago">Chicago</button>
+                <hr>
+                <button class="btn btn-warning citySubmit" data-button="houston">Houston</button>
+                <hr>
+                <button class="btn btn-warning citySubmit" data-button="phoenix">Phoenix</button>
+                <hr>
+                
+                </div>
+                <div class="col-lg-8 m-2">
+                    <div class="row m-2 border  rounded text-center justify-content-center bgcolor">
+                        <div class="col-lg-12">
+                            <h2 class=>Today's Weather in <span id="city"></span></h2>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3 id="temp">---</h3>
+                                    <hr>
+                                    <P id="weather">---</P>
+                                    <hr>
+                                    <P><span class="emptyMe">---</span><span id="hiTemp"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="loTemp"></span></P>
+                                    <hr>
+                                    <P><span class="emptyMe">---</span><span id="windSpeed"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="windDirect"></span>
+                                    </P>
+                                </div>
+                                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                    <img class="" id="todayIcon" src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row m-2 border rounded bgcolor">
+                        <div class="col-lg-12">
+                            <h1>5 Day Outlook</h1>
+                            <div class="row justify-content-around">
+                            <div
+                                class="col-lg-2 weatherBox m-2 p-2 forecast border rounded text-center d-flex flex-column justify-content-around">
+                                <h5 id="forecastDate1"></h5>
+                                <img id="forecastIcon1" src="" alt="">
+                                <h5 id="forecastTemp1"></h5>
+                                <h5 id="forecastPop1"></h5>
+                            </div>
+                            <div
+                                class="col-lg-2 weatherBox m-2 p-2 forecast border rounded text-center d-flex flex-column justify-content-around">
+                                <h5 id="forecastDate2"></h5>
+                                <img id="forecastIcon2" src="" alt="">
+                                <h5 id="forecastTemp2"></h5>
+                                <h5 id="forecastPop2"></h5>
+                            </div>
+                            <div
+                                class="col-lg-2 weatherBox m-2 p-2 forecast border rounded text-center d-flex flex-column justify-content-around">
+                                <h5 id="forecastDate3"></h5>
+                                <img id="forecastIcon3" src="" alt="">
+                                <h5 id="forecastTemp3"></h5>
+                                <h5 id="forecastPop3"></h5>
+                            </div>
+                            <div
+                                class="col-lg-2 weatherBox m-2 p-2 forecast border rounded text-center d-flex flex-column justify-content-around">
+                                <h5 id="forecastDate4"></h5>
+                                <img id="forecastIcon4" src="" alt="">
+                                <h5 id="forecastTemp4"></h5>
+                                <h5 id="forecastPop4"></h5>
+                            </div>
+                            <div
+                                class="col-lg-2 weatherBox m-2 p-2 forecast border rounded text-center d-flex flex-column justify-content-around">
+                                <h5 id="forecastDate5"></h5>
+                                <img id="forecastIcon5" src="" alt="">
+                                <h5 id="forecastTemp5"></h5>
+                                <h5 id="forecastPop5"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -45,4 +129,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

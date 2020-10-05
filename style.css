@@ -1,0 +1,27 @@
+.weatherBox {
+    height: 230px;
+    width: 220px;
+    background-color: dodgerblue;
+}
+
+#todayIcon {
+    width: 50%;
+    height: auto;
+}
+
+body {
+    background-color: #14344e;
+}
+
+.bgcolor {
+    background-color: #1175ae;
+}
+
+body {
+    color: #f2f2f2 !important;
+    font-family: 'EB Garamond', serif;
+}
+
+.btn {
+    color: #f2f2f2 !important;
+}
